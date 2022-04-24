@@ -1,0 +1,15 @@
+DECLARE
+mCurr_bal number(11,2);
+mAcct_no varchar2(7);
+mFine number(4):= 100;
+mMin_bal CONSTANT number(7,2):= 5000.00;
+BEGIN
+mAcct_no:=&mAcct_no;
+SELECT balance INTO mCurr_bal FROM acct_mstr WHERE account_no= mAcct_no;
+IF mCurr_bal<mMin_bal THEN
+UPDATE acct_mstr SET balance=balance-mFine WHERE account_no= mAcct_no;
+ELSE
+UPDATE acct_mstr SET balance=balance+200 WHERE account_no=mAcct_no;
+END IF;
+END;
+/

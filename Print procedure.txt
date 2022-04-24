@@ -1,0 +1,7 @@
+Create or Replace Procedure empty as
+BEGIN
+dbms_output.put_line('This is print procedure');
+null;
+END empty;
+/
+exec empty

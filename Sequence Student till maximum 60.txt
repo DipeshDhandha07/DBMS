@@ -1,0 +1,17 @@
+Create table student2(id number, name varchar(10), contact_no number, subject varchar(10));
+CREATE SEQUENCE stu
+increment by 1
+start with 11
+minvalue 1
+maxvalue 60
+nocycle
+order;
+BEGIN
+Insert into student2 values(stu.nextval,'Dipesh',6000,'Python');
+Insert into student2 values(stu.nextval,'Ganesh',5450,'Java');
+Insert into student2 values(stu.nextval,'Raj',3046,'DBMS');
+Insert into student2 values(stu.nextval,'Sham',5688,'OS');
+Insert into student2 values(stu.nextval,'Gopal',4003,'CGT');
+END;
+/
+select * from student2;

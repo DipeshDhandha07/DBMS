@@ -1,0 +1,14 @@
+Create or Replace Procedure procsqr(x in number) as
+BEGIN
+dbms_output.put_line('The Square of no is '||(x*x));
+END procsqr;
+/
+DECLARE
+x number(10);
+y number(10);
+z number(10);
+BEGIN
+x:= &x;
+procsqr(x);
+END;
+/

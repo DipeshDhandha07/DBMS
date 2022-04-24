@@ -1,0 +1,12 @@
+DECLARE
+r  number:=1;
+Square number;
+BEGIN
+LOOP
+Square:=r*r;
+dbms_output.put_line('Square of  '||r||'  is: '||Square);
+r:=r+1;
+exit WHEN r>10;
+END LOOP;
+END;
+/

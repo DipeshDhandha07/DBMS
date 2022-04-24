@@ -1,0 +1,10 @@
+DECLARE
+i number:= 1;
+BEGIN
+LOOP
+EXIT WHEN i>10;
+dbms_output.put_line(i);
+i:=i+1;
+END LOOP;
+END;
+/

@@ -1,0 +1,16 @@
+DECLARE
+fact number(10):=1;
+i number(10):= 1;
+n number(10);
+PROCEDURE factorial(n in number) as
+BEGIN
+for i in 1..n LOOP
+fact:= fact*i;
+END LOOP;
+END factorial;
+BEGIN
+n:= &n;
+factorial(n);
+dbms_output.put_line('Factorial of '||n|| ' is ' ||fact);
+END;
+/

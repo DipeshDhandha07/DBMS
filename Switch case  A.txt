@@ -1,0 +1,14 @@
+DECLARE
+a number(3) := 100;
+BEGIN
+CASE a when 10 then 
+dbms_output.put_line('Value of a is 30');
+when 20 then
+dbms_output.put_line('Value of a is 30');
+when 30 then
+dbms_output.put_line('Value of a is 30');
+ELSE
+dbms_output.put_line('No such value is matching');
+END CASE;
+END;
+/

@@ -1,0 +1,18 @@
+Create or Replace Procedure procmax(x in number, y in number) as
+BEGIN
+IF(x>y) THEN
+dbms_output.put_line('Maximum no is:'||x);
+ELSE
+dbms_output.put_line('Maximum no is:'||y);
+END IF;
+END procmax;
+/
+DECLARE
+x number(10);
+y number(10);
+BEGIN
+x:= &x;
+y:= &y;
+procmax(x,y);
+END;
+/

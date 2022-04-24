@@ -1,0 +1,18 @@
+DECLARE
+grade char(1) := 'A';
+BEGIN
+If(grade= 'A') then 
+dbms_output.put_line('Excellent');
+Elsif(grade='B') then
+dbms_output.put_line('Very good');
+Elsif(grade='C') then
+dbms_output.put_line('Well done');
+Elsif(grade='D') then
+dbms_output.put_line('You passed');
+Elsif(grade='F')then
+dbms_output.put_line('Better try again');
+ELSE
+dbms_output.put_line('No such grade');
+END IF;
+END;
+/

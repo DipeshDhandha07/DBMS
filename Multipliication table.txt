@@ -1,0 +1,13 @@
+DECLARE
+i number:=1;
+a number;
+BEGIN
+a:= &a;
+dbms_output.put_line('The multplication table of ' ||a||'is');
+LOOP
+dbms_output.put_line(a||' * '||i||' = '||(a*i));
+i:=i+1;
+EXIT WHEN i>10;
+END LOOP;
+END;
+/

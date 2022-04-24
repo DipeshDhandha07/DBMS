@@ -1,0 +1,16 @@
+Create or Replace Procedure procmult(x in number, y in number, z out number) as
+BEGIN
+z:=x*y;
+END procmult;
+/
+DECLARE
+x number(10);
+y number(10);
+z number(10);
+BEGIN
+x:= &x;
+y:= &y;
+procmult(x,y,z);
+dbms_output.put_line('Multiplication  is:'||z);
+END;
+/

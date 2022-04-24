@@ -1,0 +1,7 @@
+BEGIN
+for i in 1..20 LOOP
+Insert into student2 values(stu.nextval,'Dipesh',3780,'ADMS');
+END LOOP;
+END;
+/
+Select * from student2;

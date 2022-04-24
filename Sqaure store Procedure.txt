@@ -1,0 +1,12 @@
+DECLARE
+x number(10);
+PROCEDURE procsq(x in out number) as
+BEGIN
+x:=x*x;
+END procsq;
+BEGIN
+x:=&x;
+procsq(x);
+dbms_output.put_line('The square is: '||x);
+END;
+/

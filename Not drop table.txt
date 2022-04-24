@@ -1,0 +1,7 @@
+CREATE OR REPLACE trigger trig_drop1
+before drop on schema
+BEGIN
+raise_application_error('-20000','can not drop');
+END;
+/
+drop table acct_mstr;

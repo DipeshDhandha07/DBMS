@@ -1,0 +1,14 @@
+DECLARE
+radius number;
+area number(5,2);
+pi CONSTANT number:= 3.14;
+BEGIN
+radius:= &radius;
+While radius>=7
+LOOP
+area:= pi*power(radius,2);
+INSERT INTO AREA2(radius,area)VALUES(radius,area);
+radius:= radius+1;
+END LOOP;
+END;
+/

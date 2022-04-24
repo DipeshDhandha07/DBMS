@@ -1,0 +1,15 @@
+DECLARE
+a number(11,2):=11;
+BEGIN
+<<loop_start>>
+WHILE a<=20
+LOOP
+dbms_output.put_line(a);
+a:=a+1;
+IF a=15 THEN
+a:=a+1;
+dbms_output.put_line('15 skipped due to goto statement');
+END IF;
+END LOOP;
+END;
+/

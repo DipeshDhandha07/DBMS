@@ -1,0 +1,8 @@
+Declare
+a number(2);
+Begin
+FOR a in  1..10 Loop
+dbms_output.put_line('The Value of a  :'||a);
+End Loop;
+End;
+/ 

@@ -1,0 +1,6 @@
+Create or Replace Procedure empty as
+BEGIN
+null;
+END empty;
+/
+exec empty

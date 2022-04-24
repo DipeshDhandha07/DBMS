@@ -1,0 +1,6 @@
+CREATE TABLE acct_mstr(cust_id number(10),account_no number(10),balance number(10),branch varchar2(10));
+INSERT INTO acct_mstr(cust_id , account_no, balance,branch)VALUES(200,40001,6000,'vikhroli');
+INSERT INTO acct_mstr(cust_id , account_no, balance,branch)VALUES(300,40002,8000,'thane');
+INSERT INTO acct_mstr(cust_id , account_no, balance,branch)VALUES(400,40003,2000,'sion');
+INSERT INTO acct_mstr(cust_id , account_no, balance,branch)VALUES(500,40004,4000,'chembur');
+SELECT * from acct_mstr;

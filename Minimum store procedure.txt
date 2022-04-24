@@ -1,0 +1,17 @@
+DECLARE
+x number(10);
+y number(10);
+PROCEDURE procmin(x in number, y in number) as
+BEGIN
+IF x<y THEN
+dbms_output.put_line(x||' is minimum');
+ELSE
+dbms_output.put_line(y||' is minimum');
+END IF;
+END procmin;
+BEGIN
+x:= &x;
+y:= &y;
+procmin(x,y);
+END;
+/

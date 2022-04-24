@@ -1,0 +1,11 @@
+DECLARE
+a number;
+BEGIN
+a:=&a;
+IF mod(a,2)=0 THEN
+dbms_output.put_line(a||' is even');
+ELSE
+dbms_output.put_line(a||' is odd');
+END IF;
+END;
+/

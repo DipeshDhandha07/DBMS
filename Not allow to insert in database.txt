@@ -1,0 +1,7 @@
+CREATE OR REPLACE trigger trig_insert
+before insert on acct_mstr
+BEGIN
+raise_application_error('-20001','can not insert value');
+END;
+/
+insert into acct_mstr values(170,400,60000,'fort');

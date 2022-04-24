@@ -1,0 +1,11 @@
+insert into acct_mstr(cust_id, account_no, balance, branch) VALUES(45, 500,90000,'Kurla');
+select*from acct_mstr;
+CREATE OR REPLACE trigger acct_conditon
+before insert on acct_mstr
+for each row
+when(ne.cust_id>100)
+BEGIN
+raise_application_error('-20002','can not insert record greater than 100');
+END;
+/
+insert into acct_mstr values(190, 400,3000,'Matunga');
